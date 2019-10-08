@@ -1,3 +1,23 @@
+// loader js
+$(window).on("load", function () {
+
+    $(".loader .inner").fadeOut(1500, function () {
+        $(".loader").fadeOut(1750);
+    });
+
+    $(".items").isotope({
+        filter: "*",
+        animationOptions: {
+            duration: 1500,
+            easing: "linear",
+            queue: false
+        }
+
+    });
+
+});
+
+
 $(document).ready(function () {
     $('#slides').superslides({
         animation: 'fade',
@@ -78,15 +98,6 @@ $(document).ready(function () {
 
     $("[data-fancybox]").fancybox();
 
-    $(".items").isotope({
-        filter: "*",
-        animationOptions: {
-            duration: 1500,
-            easing: "linear",
-            queue: false
-        }
-
-    });
 
     $("#filters a").click(function () {
 
